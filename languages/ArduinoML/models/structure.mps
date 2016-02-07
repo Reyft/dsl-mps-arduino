@@ -12,6 +12,7 @@
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1082978164219" name="jetbrains.mps.lang.structure.structure.EnumerationDataTypeDeclaration" flags="ng" index="AxPO7">
+        <property id="1212080844762" name="hasNoDefaultMember" index="PDuV0" />
         <reference id="1083171729157" name="memberDataType" index="M4eZT" />
         <child id="1083172003582" name="member" index="M5hS2" />
       </concept>
@@ -122,6 +123,12 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="LxEUOm3spg" resolve="ReadValue" />
     </node>
+    <node concept="1TJgyj" id="4U_kQjaP2xk" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="converter" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="4U_kQjaOMj_" resolve="Converter" />
+    </node>
     <node concept="1TJgyj" id="3VrxZglAb40" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="writeValue" />
@@ -186,6 +193,8 @@
   <node concept="1TIwiD" id="3VrxZglAdDE">
     <property role="1pbfSe" value="1416913502" />
     <property role="TrG5h" value="Transition" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3VrxZglAdDF" role="1TKVEi">
       <property role="20lmBu" value="reference" />
@@ -204,6 +213,69 @@
     <node concept="M4N5e" id="3VrxZglAjTb" role="M5hS2">
       <property role="1uS6qv" value="analog" />
       <property role="1uS6qo" value="analog" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1IQtzoy0Tby">
+    <property role="1pbfSe" value="1035602200" />
+    <property role="TrG5h" value="Actuator" />
+    <ref role="1TJDcQ" node="7r$TA1_dEZw" resolve="Brick" />
+  </node>
+  <node concept="1TIwiD" id="1IQtzoy0Ytp">
+    <property role="1pbfSe" value="1035623823" />
+    <property role="TrG5h" value="Goto" />
+    <ref role="1TJDcQ" node="3VrxZglAdDE" resolve="Transition" />
+  </node>
+  <node concept="1TIwiD" id="1IQtzoy0YtP">
+    <property role="1pbfSe" value="1035623851" />
+    <property role="TrG5h" value="ConditionalTransition" />
+    <ref role="1TJDcQ" node="3VrxZglAdDE" resolve="Transition" />
+    <node concept="1TJgyi" id="1IQtzoy0Yuh" role="1TKVEl">
+      <property role="TrG5h" value="status" />
+      <ref role="AX2Wp" node="1IQtzoy0Yun" resolve="STATUS" />
+    </node>
+    <node concept="1TJgyj" id="1IQtzoy0YuR" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="sensor" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7r$TA1_dEZA" resolve="Sensor" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="1IQtzoy0Yun">
+    <property role="TrG5h" value="STATUS" />
+    <property role="PDuV0" value="true" />
+    <ref role="M4eZT" to="tpck:fKAQMTB" resolve="boolean" />
+    <node concept="M4N5e" id="1IQtzoy0Yuo" role="M5hS2">
+      <property role="1uS6qv" value="true" />
+      <property role="1uS6qo" value="high" />
+    </node>
+    <node concept="M4N5e" id="1IQtzoy0YuO" role="M5hS2">
+      <property role="1uS6qv" value="false" />
+      <property role="1uS6qo" value="low" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4U_kQjaOMj_">
+    <property role="1pbfSe" value="427325513" />
+    <property role="TrG5h" value="Converter" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="4U_kQjaOMkT" role="1TKVEl">
+      <property role="TrG5h" value="from" />
+      <ref role="AX2Wp" node="4U_kQjaOMk1" resolve="ANALOGVALUE" />
+    </node>
+    <node concept="1TJgyi" id="4U_kQjaOMlP" role="1TKVEl">
+      <property role="TrG5h" value="to" />
+      <ref role="AX2Wp" node="4U_kQjaOMk1" resolve="ANALOGVALUE" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="4U_kQjaOMk1">
+    <property role="TrG5h" value="ANALOGVALUE" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="4U_kQjaOMk2" role="M5hS2">
+      <property role="1uS6qo" value="celsius" />
+      <property role="1uS6qv" value="celsius" />
+    </node>
+    <node concept="M4N5e" id="4U_kQjaOMl4" role="M5hS2">
+      <property role="1uS6qv" value="kelvin" />
+      <property role="1uS6qo" value="kelvin" />
     </node>
   </node>
 </model>

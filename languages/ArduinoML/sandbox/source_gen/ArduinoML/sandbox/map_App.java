@@ -13,6 +13,7 @@ public class map_App {
     System.out.println("void setup() {");
     System.out.println("  pinMode(" + 8 + ", INPUT);");
     System.out.println("  pinMode(" + 2 + ", INPUT);");
+    System.out.println("  pinMode(" + 9 + ", OUTPUT);");
     System.out.println("  numRows = " + 2 + ";");
     System.out.println("  numCols = " + 16 + ";");
     System.out.println("  lcd.begin(numCols, numRows);");
@@ -21,6 +22,7 @@ public class map_App {
     System.out.println("\n// Behavorial concepts");
 
     System.out.println("long value = 0;\n");
+    System.out.println("long time = 0; long debounce = 200;\n");
 
     System.out.println("// Here comes the states declarations");
     System.out.print("void state_" + "read" + "() {\n");
@@ -29,6 +31,11 @@ public class map_App {
     } else {
       System.out.println("  value = (long) analogRead(" + 2 + ");");
     }
+    System.out.println("  boolean guard = millis() - time > debounce;");
+    System.out.println("  state_" + "convert" + "();");
+    System.out.println("}\n");
+    System.out.print("void state_" + "convert" + "() {\n");
+    System.out.println("  boolean guard = millis() - time > debounce;");
     System.out.println("  state_" + "write" + "();");
     System.out.println("}\n");
     System.out.print("void state_" + "write" + "() {\n");
@@ -38,11 +45,35 @@ public class map_App {
     System.out.println("  char finalString[sizeof(text) + sizeof(value)];");
     System.out.println("  strcpy(finalString, text);\n  strcat(finalString, val);\n  for(int row = 0; row < numRows; row++) {");
     System.out.println("    for(int col = 0; col < numCols; col++) {");
-    System.out.println("      // set the cursor position:\n      lcd.setCursor(col, row);\n      // print the letter:\n      lcd.write(finalString[pos++]);\n      if(pos > sizeof(finalString)) {\n        exit(0);\n      }\n    }\n    delay(wait);\n  }");
-    System.out.println("  lcd.clear();\n  pos -= numCols;");
-    System.out.println("  state_" + "read" + "();");
+    System.out.println("      if (pos <= sizeof(finalString)) {     // set the cursor position:\n      lcd.setCursor(col, row);\n      // print the letter:\n      lcd.write(finalString[pos++]);\n    }\n  }\n      if(row == numRows-1) { delay(wait); }}");
+    System.out.println("  lcd.clear();\n  if (pos > sizeof(finalString)) { pos = 0; lcd.clear(); } else { pos -= numCols; }");
+    System.out.println("  boolean guard = millis() - time > debounce;");
+    System.out.println("  if (digitalRead(" + 8 + ") == " + "HIGH" + " && guard) {");
+    System.out.println("    time = millis(); state_" + "final" + "();");
+    System.out.println("  } else { state_" + "write" + "(); }");
+    System.out.println("}\n");
+    System.out.print("void state_" + "final" + "() {\n");
+    System.out.print("  char val[30];\n  char text[] = \"");
+    System.out.println("finiiii" + "\";");
+    System.out.println("  sprintf(val, \"%ld\", value);");
+    System.out.println("  char finalString[sizeof(text) + sizeof(value)];");
+    System.out.println("  strcpy(finalString, text);\n  strcat(finalString, val);\n  for(int row = 0; row < numRows; row++) {");
+    System.out.println("    for(int col = 0; col < numCols; col++) {");
+    System.out.println("      if (pos <= sizeof(finalString)) {     // set the cursor position:\n      lcd.setCursor(col, row);\n      // print the letter:\n      lcd.write(finalString[pos++]);\n    }\n  }\n      if(row == numRows-1) { delay(wait); }}");
+    System.out.println("  lcd.clear();\n  if (pos > sizeof(finalString)) { pos = 0; lcd.clear(); } else { pos -= numCols; }");
+    System.out.println("  boolean guard = millis() - time > debounce;");
+    System.out.println("  if (digitalRead(" + 8 + ") == " + "LOW" + " && guard) {");
+    System.out.println("    time = millis(); state_" + "read" + "();");
+    System.out.println("  } else { state_" + "final" + "(); }");
     System.out.println("}\n");
 
     System.out.println("\nvoid loop() { state_" + "read" + "(); } // Entering init state\n");
+
+    System.out.println("void convert(from, to) {");
+    System.out.println("  float voltage = value * 5.0;");
+    System.out.println("  voltage /= 1024.0;");
+    System.out.println("  float tempC = (voltage - 0.5) * 100;");
+    System.out.println("  value = tempC;");
+    System.out.println("}");
   }
 }

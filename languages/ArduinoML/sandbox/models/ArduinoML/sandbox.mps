@@ -41,6 +41,12 @@
         <property id="3796289314233046927" name="rows" index="2NPZqb" />
         <property id="3796289314233046929" name="cols" index="2NPZql" />
       </concept>
+      <concept id="1996913459656386421" name="ArduinoML.structure.ConditionalTransition" flags="ng" index="THp53">
+        <property id="1996913459656386449" name="status" index="THp6B" />
+        <reference id="1996913459656386487" name="sensor" index="THp61" />
+      </concept>
+      <concept id="1996913459656386393" name="ArduinoML.structure.Goto" flags="ng" index="THp5J" />
+      <concept id="1996913459656364770" name="ArduinoML.structure.Actuator" flags="ng" index="THujk" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
@@ -56,21 +62,41 @@
     <ref role="jR9YG" node="3VrxZglAj$a" resolve="read" />
     <node concept="jR8Hg" id="3VrxZglAj$a" role="jR9YD">
       <property role="TrG5h" value="read" />
-      <node concept="FgPQu" id="3VrxZglAjCr" role="FgPQp">
-        <ref role="FgPQv" node="3VrxZglAjCl" resolve="write" />
-      </node>
       <node concept="qr6RX" id="3VrxZglAmLu" role="qr6RY">
         <ref role="qr6RW" node="7r$TA1_dU1F" resolve="temperature" />
+      </node>
+      <node concept="THp5J" id="1IQtzoy140M" role="FgPQp">
+        <ref role="FgPQv" node="4U_kQjaPd2T" resolve="convert" />
+      </node>
+    </node>
+    <node concept="jR8Hg" id="4U_kQjaPd2T" role="jR9YD">
+      <property role="TrG5h" value="convert" />
+      <node concept="THp5J" id="4U_kQjaPd3I" role="FgPQp">
+        <ref role="FgPQv" node="3VrxZglAjCl" resolve="write" />
       </node>
     </node>
     <node concept="jR8Hg" id="3VrxZglAjCl" role="jR9YD">
       <property role="TrG5h" value="write" />
-      <node concept="FgPQu" id="3VrxZglAjCm" role="FgPQp">
-        <ref role="FgPQv" node="3VrxZglAj$a" resolve="read" />
-      </node>
       <node concept="FjJzT" id="3VrxZglAmLw" role="FgNrO">
         <property role="OYnhT" value="La temperature est de : " />
         <ref role="FjJzA" node="3VrxZgl_Uf1" resolve="lcd" />
+      </node>
+      <node concept="THp53" id="1IQtzoy1LhD" role="FgPQp">
+        <property role="THp6B" value="true" />
+        <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
+        <ref role="FgPQv" node="1IQtzoy1LhF" resolve="final" />
+      </node>
+    </node>
+    <node concept="jR8Hg" id="1IQtzoy1LhF" role="jR9YD">
+      <property role="TrG5h" value="final" />
+      <node concept="FjJzT" id="1IQtzoy1LhP" role="FgNrO">
+        <property role="OYnhT" value="finiiii" />
+        <ref role="FjJzA" node="3VrxZgl_Uf1" resolve="lcd" />
+      </node>
+      <node concept="THp53" id="4U_kQjaOLQP" role="FgPQp">
+        <property role="THp6B" value="false" />
+        <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
+        <ref role="FgPQv" node="3VrxZglAj$a" resolve="read" />
       </node>
     </node>
     <node concept="jO$A6" id="LxEUOm3Le_" role="jO$Aa">
@@ -81,6 +107,10 @@
       <property role="TrG5h" value="temperature" />
       <property role="jO$A3" value="2" />
       <property role="FgFBt" value="analog" />
+    </node>
+    <node concept="THujk" id="1IQtzoy0XGV" role="jO$Aa">
+      <property role="TrG5h" value="buzzer" />
+      <property role="jO$A3" value="9" />
     </node>
     <node concept="2NPRRT" id="3VrxZgl_Uf1" role="2NPRRE">
       <property role="2NPRRC" value="2" />
