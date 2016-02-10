@@ -130,6 +130,9 @@
         <property role="OYnhT" value="The temperature is " />
         <ref role="FjJzA" node="3VrxZgl_Uf1" resolve="lcd" />
       </node>
+      <node concept="qr6RX" id="6W3af9HF9Ml" role="2H6$LU">
+        <ref role="qr6RW" node="LxEUOm3Le_" resolve="button" />
+      </node>
     </node>
     <node concept="jR8Hg" id="2NjdNU1Ny4M" role="jR9YD">
       <property role="TrG5h" value="fini" />

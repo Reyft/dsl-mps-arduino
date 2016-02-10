@@ -47,6 +47,11 @@ public class map_App {
     System.out.println("    for(int col = 0; col < numCols; col++) {");
     System.out.println("      if (pos <= sizeof(finalString)) {     // set the cursor position:\n      lcd.setCursor(col, row);\n      // print the letter:\n      lcd.write(finalString[pos++]);\n    }\n  }\n      if(row == numRows-1) { delay(wait); }}");
     System.out.println("  lcd.clear();\n  if (pos > sizeof(finalString)) { pos = 0; lcd.clear(); } else { pos -= numCols; }");
+    if ("digital" == "digital") {
+      System.out.println("  value = (long) digitalRead(" + 8 + ");");
+    } else {
+      System.out.println("  value = analogRead(" + 8 + ");");
+    }
     System.out.println("  boolean guard = millis() - time > debounce;");
     System.out.println("  // Transitions");
     System.out.print("\n  if (digitalRead(" + 8 + ") ");
