@@ -223,6 +223,12 @@
         <ref role="v9R2y" node="1IQtzoy1qlM" resolve="reduce_ConditionalTransition" />
       </node>
     </node>
+    <node concept="3aamgX" id="5T246p705cu" role="3acgRq">
+      <ref role="30HIoZ" to="dt8h:4U_kQjaOMj_" resolve="Converter" />
+      <node concept="j$656" id="5T246p705cM" role="1lVwrX">
+        <ref role="v9R2y" node="4U_kQjaOMAC" resolve="reduce_Converter" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="7r$TA1_dUG_">
     <property role="TrG5h" value="map_App" />
@@ -361,7 +367,7 @@
             <node concept="liA8E" id="1FkuK6L5vEI" role="2OqNvi">
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
               <node concept="Xl_RD" id="1FkuK6L5vFv" role="37wK5m">
-                <property role="Xl_RC" value="long value = 0;\n" />
+                <property role="Xl_RC" value="float value = 0;\n" />
               </node>
             </node>
           </node>
@@ -467,7 +473,21 @@
             <node concept="liA8E" id="4U_kQjaOPXw" role="2OqNvi">
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
               <node concept="Xl_RD" id="4U_kQjaOPY1" role="37wK5m">
-                <property role="Xl_RC" value="void convert(from, to) {" />
+                <property role="Xl_RC" value="void convert(String from, String to) {" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5T246p70uA3" role="3cqZAp">
+          <node concept="2OqwBi" id="5T246p70uUQ" role="3clFbG">
+            <node concept="10M0yZ" id="5T246p70uA2" role="2Oq$k0">
+              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+            </node>
+            <node concept="liA8E" id="5T246p70v6W" role="2OqNvi">
+              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+              <node concept="Xl_RD" id="5T246p70v8L" role="37wK5m">
+                <property role="Xl_RC" value="  if (from == \&quot;input\&quot; &amp;&amp; to == \&quot;celsius\&quot; ) {" />
               </node>
             </node>
           </node>
@@ -481,7 +501,7 @@
             <node concept="liA8E" id="4U_kQjaORvs" role="2OqNvi">
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
               <node concept="Xl_RD" id="4U_kQjaORys" role="37wK5m">
-                <property role="Xl_RC" value="  float voltage = value * 5.0;" />
+                <property role="Xl_RC" value="    float voltage = value * 1.35;" />
               </node>
             </node>
           </node>
@@ -495,7 +515,7 @@
             <node concept="liA8E" id="4U_kQjaOUJi" role="2OqNvi">
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
               <node concept="Xl_RD" id="4U_kQjaOUMi" role="37wK5m">
-                <property role="Xl_RC" value="  voltage /= 1024.0;" />
+                <property role="Xl_RC" value="    voltage /= 1024.0;" />
               </node>
             </node>
           </node>
@@ -509,7 +529,7 @@
             <node concept="liA8E" id="4U_kQjaOXCl" role="2OqNvi">
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
               <node concept="Xl_RD" id="4U_kQjaOXFl" role="37wK5m">
-                <property role="Xl_RC" value="  float tempC = (voltage - 0.5) * 100;" />
+                <property role="Xl_RC" value="    float tempC = (voltage - 0.5) * 100;" />
               </node>
             </node>
           </node>
@@ -523,7 +543,21 @@
             <node concept="liA8E" id="4U_kQjaOYPM" role="2OqNvi">
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
               <node concept="Xl_RD" id="4U_kQjaOYQj" role="37wK5m">
-                <property role="Xl_RC" value="  value = tempC;" />
+                <property role="Xl_RC" value="    value = tempC;" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5T246p70wEn" role="3cqZAp">
+          <node concept="2OqwBi" id="5T246p70wZT" role="3clFbG">
+            <node concept="10M0yZ" id="5T246p70wEm" role="2Oq$k0">
+              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+            </node>
+            <node concept="liA8E" id="5T246p70xci" role="2OqNvi">
+              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+              <node concept="Xl_RD" id="5T246p70xg0" role="37wK5m">
+                <property role="Xl_RC" value="  }" />
               </node>
             </node>
           </node>
@@ -928,7 +962,7 @@
             <node concept="liA8E" id="3VrxZglAI$V" role="2OqNvi">
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
               <node concept="Xl_RD" id="3VrxZglAIOM" role="37wK5m">
-                <property role="Xl_RC" value="  sprintf(val, \&quot;%ld\&quot;, value);" />
+                <property role="Xl_RC" value="  dtostrf(value, 4, 2, val);\n  sprintf(val,\&quot;%s \&quot;, val);" />
               </node>
             </node>
           </node>
@@ -1105,7 +1139,7 @@
                       </node>
                       <node concept="3cpWs3" id="7r695MzYaPD" role="3uHU7B">
                         <node concept="Xl_RD" id="7r695MzYaAe" role="3uHU7B">
-                          <property role="Xl_RC" value="  value = (long) analogRead(" />
+                          <property role="Xl_RC" value="  value = analogRead(" />
                         </node>
                         <node concept="3cmrfG" id="7r695MzYaQL" role="3uHU7w">
                           <property role="3cmrfH" value="0" />
@@ -1390,24 +1424,56 @@
               <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
               <node concept="3cpWs3" id="4U_kQjaOOv8" role="37wK5m">
                 <node concept="Xl_RD" id="4U_kQjaOO$c" role="3uHU7w">
-                  <property role="Xl_RC" value=");" />
+                  <property role="Xl_RC" value="\&quot;);" />
                 </node>
                 <node concept="3cpWs3" id="4U_kQjaOOhK" role="3uHU7B">
                   <node concept="3cpWs3" id="4U_kQjaOO3a" role="3uHU7B">
                     <node concept="3cpWs3" id="4U_kQjaONVP" role="3uHU7B">
                       <node concept="Xl_RD" id="4U_kQjaONqg" role="3uHU7B">
-                        <property role="Xl_RC" value="convert(" />
+                        <property role="Xl_RC" value="  convert(\&quot;" />
                       </node>
                       <node concept="Xl_RD" id="4U_kQjaONXs" role="3uHU7w">
                         <property role="Xl_RC" value="from" />
+                        <node concept="17Uvod" id="5T246p708QG" role="lGtFl">
+                          <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                          <property role="2qtEX9" value="value" />
+                          <node concept="3zFVjK" id="5T246p708QH" role="3zH0cK">
+                            <node concept="3clFbS" id="5T246p708QI" role="2VODD2">
+                              <node concept="3clFbF" id="5T246p709$q" role="3cqZAp">
+                                <node concept="2OqwBi" id="5T246p709BC" role="3clFbG">
+                                  <node concept="30H73N" id="5T246p709$p" role="2Oq$k0" />
+                                  <node concept="3TrcHB" id="5T246p709Gp" role="2OqNvi">
+                                    <ref role="3TsBF5" to="dt8h:4U_kQjaOMkT" resolve="from" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
                       </node>
                     </node>
                     <node concept="Xl_RD" id="4U_kQjaOOab" role="3uHU7w">
-                      <property role="Xl_RC" value=", " />
+                      <property role="Xl_RC" value="\&quot;, \&quot;" />
                     </node>
                   </node>
                   <node concept="Xl_RD" id="4U_kQjaOOme" role="3uHU7w">
                     <property role="Xl_RC" value="to" />
+                    <node concept="17Uvod" id="5T246p709LV" role="lGtFl">
+                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                      <property role="2qtEX9" value="value" />
+                      <node concept="3zFVjK" id="5T246p709LW" role="3zH0cK">
+                        <node concept="3clFbS" id="5T246p709LX" role="2VODD2">
+                          <node concept="3clFbF" id="5T246p709Pq" role="3cqZAp">
+                            <node concept="2OqwBi" id="5T246p709S3" role="3clFbG">
+                              <node concept="30H73N" id="5T246p709Pp" role="2Oq$k0" />
+                              <node concept="3TrcHB" id="5T246p709WS" role="2OqNvi">
+                                <ref role="3TsBF5" to="dt8h:4U_kQjaOMlP" resolve="to" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>

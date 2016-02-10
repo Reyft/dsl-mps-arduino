@@ -10,6 +10,9 @@
   </imports>
   <registry>
     <language id="3389428e-8c99-44b6-8b7e-9adb09b40a0b" name="ArduinoML">
+      <concept id="5667027398480307429" name="ArduinoML.structure.Converter" flags="ng" index="24tBu1">
+        <property id="5667027398480307513" name="from" index="24tBpt" />
+      </concept>
       <concept id="8567225692854857696" name="ArduinoML.structure.Brick" flags="ng" index="jO$A0">
         <property id="8567225692854857699" name="pin" index="jO$A3" />
       </concept>
@@ -67,7 +70,7 @@
     </node>
     <node concept="jO$A6" id="7r$TA1_dU1F" role="jO$Aa">
       <property role="TrG5h" value="temperature" />
-      <property role="jO$A3" value="2" />
+      <property role="jO$A3" value="3" />
       <property role="FgFBt" value="analog" />
     </node>
     <node concept="THujk" id="1IQtzoy0XGV" role="jO$Aa">
@@ -84,6 +87,9 @@
       <property role="TrG5h" value="read" />
       <node concept="qr6RX" id="2NjdNU1Ny4j" role="2H6$LU">
         <ref role="qr6RW" node="7r$TA1_dU1F" resolve="temperature" />
+      </node>
+      <node concept="24tBu1" id="5T246p705jr" role="2H6$LU">
+        <property role="24tBpt" value="input" />
       </node>
       <node concept="THp5J" id="2NjdNU1NKgM" role="2H7LtM">
         <ref role="FgPQv" node="2NjdNU1Ny4E" resolve="write" />
@@ -111,6 +117,9 @@
       <node concept="FjJzT" id="2NjdNU1Ny5h" role="2H6$LU">
         <property role="OYnhT" value="fini" />
         <ref role="FjJzA" node="3VrxZgl_Uf1" resolve="lcd" />
+      </node>
+      <node concept="THp5J" id="5T246p70Ldd" role="2H7LtM">
+        <ref role="FgPQv" node="2NjdNU1NuOx" resolve="read" />
       </node>
     </node>
   </node>

@@ -266,8 +266,8 @@
       <property role="1uS6qo" value="kelvin" />
     </node>
     <node concept="M4N5e" id="2NjdNU1MINn" role="M5hS2">
-      <property role="1uS6qo" value="raw" />
-      <property role="1uS6qv" value="raw" />
+      <property role="1uS6qo" value="input" />
+      <property role="1uS6qv" value="input" />
     </node>
   </node>
   <node concept="1TIwiD" id="2NjdNU1MnH3">
