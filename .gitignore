@@ -1,9 +1,18 @@
 ## MPS project
 
 **/*.class
-languages/ArduinoML/generator/
+
+languages/ArduinoML/generator/classes_gen/
+languages/ArduinoML/generator/source_gen
+languages/ArduinoML/generator/source_gen.caches/
+
 languages/ArduinoML/classes_gen/
 languages/ArduinoML/source_gen/
 languages/ArduinoML/source_gen/
 languages/ArduinoML/source_gen.caches/
+
+languages/ArduinoML/sandbox/classes_gen/
+languages/ArduinoML/sandbox/source_gen
+languages/ArduinoML/sandbox/source_gen.caches/
+
 **/*.info
