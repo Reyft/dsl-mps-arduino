@@ -3,4 +3,6 @@
 **/*.class
 languages/classes_gen/
 languages/source_gen/
+languages/ArduinoML/source_gen/
+languages/ArduinoML/source_gen.caches/
 **/*.info
