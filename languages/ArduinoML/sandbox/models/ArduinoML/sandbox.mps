@@ -21,12 +21,8 @@
         <child id="3796289314233015534" name="bus_bricks" index="2NPRRE" />
       </concept>
       <concept id="8567225692854971696" name="ArduinoML.structure.State" flags="ng" index="jR8Hg">
-        <child id="892182961083762259" name="readValue" index="qr6RY" />
-        <child id="4529363332655264000" name="writeValue" index="FgNrO" />
         <child id="4529363332655274605" name="transition" index="FgPQp" />
-      </concept>
-      <concept id="892182961083762256" name="ArduinoML.structure.ReadValue" flags="ng" index="qr6RX">
-        <reference id="892182961083762257" name="sensor" index="qr6RW" />
+        <child id="3229986099359742788" name="actions" index="2H6$LU" />
       </concept>
       <concept id="4529363332655274602" name="ArduinoML.structure.Transition" flags="ng" index="FgPQu">
         <reference id="4529363332655274603" name="target" index="FgPQv" />
@@ -45,7 +41,6 @@
         <property id="1996913459656386449" name="status" index="THp6B" />
         <reference id="1996913459656386487" name="sensor" index="THp61" />
       </concept>
-      <concept id="1996913459656386393" name="ArduinoML.structure.Goto" flags="ng" index="THp5J" />
       <concept id="1996913459656364770" name="ArduinoML.structure.Actuator" flags="ng" index="THujk" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -59,44 +54,33 @@
   </registry>
   <node concept="jO$A7" id="7r$TA1_dQK3">
     <property role="TrG5h" value="read&amp;writeValue" />
-    <ref role="jR9YG" node="3VrxZglAj$a" resolve="read" />
-    <node concept="jR8Hg" id="3VrxZglAj$a" role="jR9YD">
+    <ref role="jR9YG" node="2NjdNU1MVr1" resolve="read" />
+    <node concept="jR8Hg" id="2NjdNU1N20S" role="jR9YD">
       <property role="TrG5h" value="read" />
-      <node concept="qr6RX" id="3VrxZglAmLu" role="qr6RY">
-        <ref role="qr6RW" node="7r$TA1_dU1F" resolve="temperature" />
-      </node>
-      <node concept="THp5J" id="1IQtzoy140M" role="FgPQp">
-        <ref role="FgPQv" node="4U_kQjaPd2T" resolve="convert" />
-      </node>
+      <node concept="FgPQu" id="2NjdNU1N20T" role="FgPQp" />
     </node>
-    <node concept="jR8Hg" id="4U_kQjaPd2T" role="jR9YD">
-      <property role="TrG5h" value="convert" />
-      <node concept="THp5J" id="4U_kQjaPd3I" role="FgPQp">
-        <ref role="FgPQv" node="3VrxZglAjCl" resolve="write" />
-      </node>
-    </node>
-    <node concept="jR8Hg" id="3VrxZglAjCl" role="jR9YD">
+    <node concept="jR8Hg" id="2NjdNU1MVu$" role="jR9YD">
       <property role="TrG5h" value="write" />
-      <node concept="FjJzT" id="3VrxZglAmLw" role="FgNrO">
-        <property role="OYnhT" value="La temperature est de : " />
+      <node concept="FjJzT" id="2NjdNU1MVva" role="2H6$LU">
+        <property role="OYnhT" value="The temperature is " />
         <ref role="FjJzA" node="3VrxZgl_Uf1" resolve="lcd" />
       </node>
-      <node concept="THp53" id="1IQtzoy1LhD" role="FgPQp">
+      <node concept="THp53" id="2NjdNU1MVvv" role="FgPQp">
         <property role="THp6B" value="true" />
         <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
-        <ref role="FgPQv" node="1IQtzoy1LhF" resolve="final" />
+        <ref role="FgPQv" node="2NjdNU1MVvx" resolve="fini" />
       </node>
     </node>
-    <node concept="jR8Hg" id="1IQtzoy1LhF" role="jR9YD">
-      <property role="TrG5h" value="final" />
-      <node concept="FjJzT" id="1IQtzoy1LhP" role="FgNrO">
-        <property role="OYnhT" value="finiiii" />
+    <node concept="jR8Hg" id="2NjdNU1MVvx" role="jR9YD">
+      <property role="TrG5h" value="fini" />
+      <node concept="FjJzT" id="2NjdNU1MVvI" role="2H6$LU">
+        <property role="OYnhT" value="fini " />
         <ref role="FjJzA" node="3VrxZgl_Uf1" resolve="lcd" />
       </node>
-      <node concept="THp53" id="4U_kQjaOLQP" role="FgPQp">
-        <property role="THp6B" value="false" />
+      <node concept="THp53" id="2NjdNU1MVvK" role="FgPQp">
+        <property role="THp6B" value="true" />
         <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
-        <ref role="FgPQv" node="3VrxZglAj$a" resolve="read" />
+        <ref role="FgPQv" node="2NjdNU1MVr1" resolve="read" />
       </node>
     </node>
     <node concept="jO$A6" id="LxEUOm3Le_" role="jO$Aa">
