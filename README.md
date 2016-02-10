@@ -1,8 +1,8 @@
 Domain Specific Languages Project
 =================================
 
-Il s'agit d'un projet de création d'un DSL à l'aide de l'IDE de JetBrains &#174 MPS &#169.
-MPS&#169 nous permet de modifier l'arbre syntaxique du language cible et définir son méta modèle.
+Il s'agit d'un projet de création d'un DSL à l'aide de l'IDE de JetBrains &#174; MPS &#169;.
+MPS&#169; nous permet de modifier l'arbre syntaxique du language cible et définir son méta modèle.
 
 
 ## Objectifs :
