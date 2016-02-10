@@ -184,7 +184,7 @@
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="3VrxZglAdDF" role="1TKVEi">
+    <node concept="1TJgyj" id="6W3af9HCT44" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="target" />
       <property role="20lbJX" value="1" />
@@ -226,6 +226,11 @@
       <property role="20kJfa" value="sensor" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7r$TA1_dEZA" resolve="Sensor" />
+    </node>
+    <node concept="1TJgyj" id="6W3af9HDeVa" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="elseCondition" />
+      <ref role="20lvS9" node="6W3af9HDeUA" resolve="ElseCondition" />
     </node>
   </node>
   <node concept="AxPO7" id="1IQtzoy0Yun">
@@ -275,6 +280,17 @@
     <property role="TrG5h" value="Action" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6W3af9HDeUA">
+    <property role="1pbfSe" value="592963688" />
+    <property role="TrG5h" value="ElseCondition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6W3af9HDeV2" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="elseTarget" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7r$TA1_e6OK" resolve="State" />
+    </node>
   </node>
 </model>
 
