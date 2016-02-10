@@ -3,7 +3,7 @@
 **/*.class
 
 languages/ArduinoML/generator/classes_gen/
-languages/ArduinoML/generator/source_gen
+languages/ArduinoML/generator/source_gen/
 languages/ArduinoML/generator/source_gen.caches/
 
 languages/ArduinoML/classes_gen/
@@ -15,5 +15,6 @@ languages/ArduinoML/sandbox/source_gen/
 languages/ArduinoML/sandbox/source_gen.caches/
 
 .mps/workspace.xml
+.mps/migration.xml
 
 **/*.info
