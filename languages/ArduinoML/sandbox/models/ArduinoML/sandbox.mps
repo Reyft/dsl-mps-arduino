@@ -10,8 +10,12 @@
   </imports>
   <registry>
     <language id="3389428e-8c99-44b6-8b7e-9adb09b40a0b" name="ArduinoML">
-      <concept id="7999282384826855078" name="ArduinoML.structure.ElseCondition" flags="ng" index="2DWpk">
-        <reference id="7999282384826855106" name="elseTarget" index="2DWoK" />
+      <concept id="7999282384827201119" name="ArduinoML.structure.ExpressionCondition" flags="ng" index="2EhUH">
+        <property id="7999282384827201196" name="value" index="2EhTu" />
+        <property id="7999282384827201147" name="comparator" index="2EhU9" />
+      </concept>
+      <concept id="7999282384827201089" name="ArduinoML.structure.BooleanCondition" flags="ng" index="2EhUN">
+        <property id="7999282384827201117" name="status" index="2EhUJ" />
       </concept>
       <concept id="5667027398480307429" name="ArduinoML.structure.Converter" flags="ng" index="24tBu1">
         <property id="5667027398480307513" name="from" index="24tBpt" />
@@ -49,9 +53,8 @@
         <property id="3796289314233046929" name="cols" index="2NPZql" />
       </concept>
       <concept id="1996913459656386421" name="ArduinoML.structure.ConditionalTransition" flags="ng" index="THp53">
-        <property id="1996913459656386449" name="status" index="THp6B" />
         <reference id="1996913459656386487" name="sensor" index="THp61" />
-        <child id="7999282384826855114" name="elseCondition" index="2DWoS" />
+        <child id="7999282384827201485" name="condition" index="2EhWZ" />
       </concept>
       <concept id="1996913459656386393" name="ArduinoML.structure.Goto" flags="ng" index="THp5J" />
       <concept id="1996913459656364770" name="ArduinoML.structure.Actuator" flags="ng" index="THujk" />
@@ -101,18 +104,27 @@
     </node>
     <node concept="jR8Hg" id="2NjdNU1Ny4E" role="jR9YD">
       <property role="TrG5h" value="write" />
-      <node concept="THp53" id="6W3af9HDB3s" role="2H7LtM">
-        <property role="THp6B" value="true" />
+      <node concept="THp53" id="6W3af9HF9BH" role="2H7LtM">
         <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
         <ref role="2CbBQ" node="2NjdNU1Ny4M" resolve="fini" />
-        <node concept="2DWpk" id="6W3af9HDOJH" role="2DWoS">
-          <ref role="2DWoK" node="2NjdNU1NuOx" resolve="read" />
+        <node concept="2EhUN" id="6W3af9HF9C0" role="2EhWZ">
+          <property role="2EhUJ" value="false" />
+        </node>
+      </node>
+      <node concept="THp53" id="6W3af9HDB3s" role="2H7LtM">
+        <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
+        <ref role="2CbBQ" node="2NjdNU1Ny4M" resolve="fini" />
+        <node concept="2EhUN" id="6W3af9HF9kl" role="2EhWZ">
+          <property role="2EhUJ" value="false" />
         </node>
       </node>
       <node concept="THp53" id="6W3af9HDB3J" role="2H7LtM">
-        <property role="THp6B" value="false" />
         <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
         <ref role="2CbBQ" node="2NjdNU1NuOx" resolve="read" />
+        <node concept="2EhUH" id="6W3af9HF0rP" role="2EhWZ">
+          <property role="2EhU9" value="&gt;" />
+          <property role="2EhTu" value="32" />
+        </node>
       </node>
       <node concept="FjJzT" id="2NjdNU1Ny4K" role="2H6$LU">
         <property role="OYnhT" value="The temperature is " />
