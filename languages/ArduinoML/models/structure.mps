@@ -122,8 +122,8 @@
     </node>
     <node concept="1TJgyj" id="2NjdNU1N21c" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="transition" />
-      <property role="20lbJX" value="1" />
+      <property role="20kJfa" value="transitions" />
+      <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3VrxZglAdDE" resolve="Transition" />
     </node>
     <node concept="PrWs8" id="7r$TA1_e6PB" role="PzmwI">

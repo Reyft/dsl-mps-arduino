@@ -44,7 +44,6 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
-      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="1198256887712" name="jetbrains.mps.lang.editor.structure.CellModel_Indent" flags="ng" index="3XFhqQ" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
@@ -93,6 +92,9 @@
           <property role="VOm3f" value="false" />
         </node>
         <node concept="3XFhqQ" id="2NjdNU1MnIh" role="3EZMnx" />
+        <node concept="3F0ifn" id="2NjdNU1NUz6" role="3EZMnx">
+          <property role="3F0ifm" value="actions:" />
+        </node>
         <node concept="3F2HdR" id="2NjdNU1MnIn" role="3EZMnx">
           <ref role="1NtTu8" to="dt8h:2NjdNU1MnH4" />
           <node concept="2iRkQZ" id="2NjdNU1MnIq" role="2czzBx" />
@@ -102,15 +104,16 @@
         </node>
         <node concept="l2Vlx" id="2NjdNU1MnHI" role="2iSdaV" />
       </node>
-      <node concept="3EZMnI" id="3VrxZgl_Ldu" role="3EZMnx">
-        <node concept="3XFhqQ" id="2NjdNU1N21g" role="3EZMnx" />
-        <node concept="3F1sOY" id="2NjdNU1N21m" role="3EZMnx">
-          <ref role="1NtTu8" to="dt8h:2NjdNU1N21c" />
-        </node>
-        <node concept="VPM3Z" id="3VrxZgl_Ldw" role="3F10Kt">
-          <property role="VOm3f" value="false" />
-        </node>
-        <node concept="l2Vlx" id="3VrxZgl_Ldz" role="2iSdaV" />
+      <node concept="3XFhqQ" id="2NjdNU1ND12" role="3EZMnx" />
+      <node concept="3F0ifn" id="2NjdNU1ND1k" role="3EZMnx">
+        <property role="3F0ifm" value="transitions:" />
+      </node>
+      <node concept="3F2HdR" id="2NjdNU1NKrm" role="3EZMnx">
+        <ref role="1NtTu8" to="dt8h:2NjdNU1N21c" />
+        <node concept="2iRkQZ" id="2NjdNU1NKro" role="2czzBx" />
+      </node>
+      <node concept="3F0ifn" id="2NjdNU1NU$m" role="3EZMnx">
+        <property role="3F0ifm" value="}" />
       </node>
       <node concept="2iRkQZ" id="1FkuK6L5oBP" role="2iSdaV" />
     </node>
