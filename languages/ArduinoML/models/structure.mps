@@ -350,5 +350,20 @@
       <property role="1uS6qv" value="&lt;=" />
     </node>
   </node>
+  <node concept="1TIwiD" id="268oGR6aZtx">
+    <property role="1pbfSe" value="407610834" />
+    <property role="TrG5h" value="ToggleActuator" />
+    <ref role="1TJDcQ" node="2NjdNU1MnH3" resolve="Action" />
+    <node concept="1TJgyi" id="268oGR6aZty" role="1TKVEl">
+      <property role="TrG5h" value="status" />
+      <ref role="AX2Wp" node="1IQtzoy0Yun" resolve="STATUS" />
+    </node>
+    <node concept="1TJgyj" id="268oGR6aZt$" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="actuator" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="1IQtzoy0Tby" resolve="Actuator" />
+    </node>
+  </node>
 </model>
 

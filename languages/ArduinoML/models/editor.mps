@@ -384,5 +384,26 @@
       <node concept="2iRfu4" id="6W3af9HEzuv" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="268oGR6aZtF">
+    <ref role="1XX52x" to="dt8h:268oGR6aZtx" resolve="ToggleActuator" />
+    <node concept="3EZMnI" id="268oGR6aZtH" role="2wV5jI">
+      <node concept="1iCGBv" id="268oGR6aZtO" role="3EZMnx">
+        <ref role="1NtTu8" to="dt8h:268oGR6aZt$" />
+        <node concept="1sVBvm" id="268oGR6aZtQ" role="1sWHZn">
+          <node concept="3F0A7n" id="268oGR6aZtX" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="268oGR6aZul" role="3EZMnx">
+        <property role="3F0ifm" value="&lt;=" />
+      </node>
+      <node concept="3F0A7n" id="268oGR6aZux" role="3EZMnx">
+        <ref role="1NtTu8" to="dt8h:268oGR6aZty" resolve="status" />
+      </node>
+      <node concept="l2Vlx" id="268oGR6aZtK" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

@@ -111,13 +111,6 @@
           <property role="2EhUJ" value="false" />
         </node>
       </node>
-      <node concept="THp53" id="6W3af9HDB3s" role="2H7LtM">
-        <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
-        <ref role="2CbBQ" node="2NjdNU1Ny4M" resolve="fini" />
-        <node concept="2EhUN" id="6W3af9HF9kl" role="2EhWZ">
-          <property role="2EhUJ" value="false" />
-        </node>
-      </node>
       <node concept="THp53" id="6W3af9HDB3J" role="2H7LtM">
         <ref role="THp61" node="LxEUOm3Le_" resolve="button" />
         <ref role="2CbBQ" node="2NjdNU1NuOx" resolve="read" />
