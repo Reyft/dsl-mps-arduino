@@ -97,7 +97,7 @@
         </node>
       </node>
       <node concept="2DWpk" id="268oGR6bVj3" role="3BDQSv">
-        <ref role="2DWoK" node="268oGR6aVNi" resolve="idle" />
+        <ref role="2DWoK" node="268oGR6aY3x" resolve="alarm" />
       </node>
     </node>
     <node concept="jO$A6" id="268oGR6aY3$" role="jO$Aa">
