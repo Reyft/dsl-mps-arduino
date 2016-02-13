@@ -76,7 +76,7 @@ public class WriteValue_Editor extends DefaultNodeEditor {
     }
   }
   private EditorCell createConstant_2xs7nh_b0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "<= write");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "=> write");
     editorCell.setCellId("Constant_2xs7nh_b0");
     editorCell.setDefaultText("");
     return editorCell;

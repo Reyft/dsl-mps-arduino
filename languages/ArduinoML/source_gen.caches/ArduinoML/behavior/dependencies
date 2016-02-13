@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="ArduinoML.behavior.Action_BehaviorDescriptor" file="Action_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ArduinoML.behavior.Actuator_BehaviorDescriptor" file="Actuator_BehaviorDescriptor.java">
+    <classNode dependClassName="ArduinoML.behavior.Brick_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="ArduinoML.behavior.App_BehaviorDescriptor" file="App_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Deprecated" />
@@ -33,6 +47,27 @@
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
+  <dependency className="ArduinoML.behavior.ConditionalTransition_BehaviorDescriptor" file="ConditionalTransition_BehaviorDescriptor.java">
+    <classNode dependClassName="ArduinoML.behavior.Transition_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ArduinoML.behavior.Converter_BehaviorDescriptor" file="Converter_BehaviorDescriptor.java">
+    <classNode dependClassName="ArduinoML.behavior.Action_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ArduinoML.behavior.Goto_BehaviorDescriptor" file="Goto_BehaviorDescriptor.java">
+    <classNode dependClassName="ArduinoML.behavior.Transition_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="ArduinoML.behavior.LCDScreen_BehaviorDescriptor" file="LCDScreen_BehaviorDescriptor.java">
     <classNode dependClassName="ArduinoML.behavior.BusBrick_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Deprecated" />
@@ -41,10 +76,10 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ArduinoML.behavior.ReadValue_BehaviorDescriptor" file="ReadValue_BehaviorDescriptor.java">
+    <classNode dependClassName="ArduinoML.behavior.Action_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Deprecated" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ArduinoML.behavior.Sensor_BehaviorDescriptor" file="Sensor_BehaviorDescriptor.java">
@@ -72,10 +107,10 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ArduinoML.behavior.WriteValue_BehaviorDescriptor" file="WriteValue_BehaviorDescriptor.java">
+    <classNode dependClassName="ArduinoML.behavior.Action_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Deprecated" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
 </dependenciesRoot>

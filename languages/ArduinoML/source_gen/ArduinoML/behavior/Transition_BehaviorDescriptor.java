@@ -10,7 +10,7 @@ import jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor;
  * This class is not involved in the actual method invocation
  */
 @Deprecated
-public class Transition_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor {
+public abstract class Transition_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor {
 
   @Override
   public String getConceptFqName() {
