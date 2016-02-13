@@ -13,6 +13,7 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1082978164219" name="jetbrains.mps.lang.structure.structure.EnumerationDataTypeDeclaration" flags="ng" index="AxPO7">
         <property id="1212080844762" name="hasNoDefaultMember" index="PDuV0" />
+        <property id="1197591154882" name="memberIdentifierPolicy" index="3lZH7k" />
         <reference id="1083171729157" name="memberDataType" index="M4eZT" />
         <child id="1083172003582" name="member" index="M5hS2" />
       </concept>
@@ -184,7 +185,7 @@
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="3VrxZglAdDF" role="1TKVEi">
+    <node concept="1TJgyj" id="6W3af9HCT44" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="target" />
       <property role="20lbJX" value="1" />
@@ -193,6 +194,7 @@
   </node>
   <node concept="AxPO7" id="3VrxZglAjSF">
     <property role="TrG5h" value="SensorType" />
+    <property role="3lZH7k" value="derive_from_presentation" />
     <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
     <node concept="M4N5e" id="3VrxZglAjT8" role="M5hS2">
       <property role="1uS6qv" value="digital" />
@@ -217,9 +219,11 @@
     <property role="1pbfSe" value="1035623851" />
     <property role="TrG5h" value="ConditionalTransition" />
     <ref role="1TJDcQ" node="3VrxZglAdDE" resolve="Transition" />
-    <node concept="1TJgyi" id="1IQtzoy0Yuh" role="1TKVEl">
-      <property role="TrG5h" value="status" />
-      <ref role="AX2Wp" node="1IQtzoy0Yun" resolve="STATUS" />
+    <node concept="1TJgyj" id="6W3af9HEzvd" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6W3af9HEvuW" resolve="Condition" />
     </node>
     <node concept="1TJgyj" id="1IQtzoy0YuR" role="1TKVEi">
       <property role="20lmBu" value="reference" />
@@ -227,10 +231,16 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7r$TA1_dEZA" resolve="Sensor" />
     </node>
+    <node concept="1TJgyj" id="6W3af9HDeVa" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="elseCondition" />
+      <ref role="20lvS9" node="6W3af9HDeUA" resolve="ElseCondition" />
+    </node>
   </node>
   <node concept="AxPO7" id="1IQtzoy0Yun">
     <property role="TrG5h" value="STATUS" />
     <property role="PDuV0" value="true" />
+    <property role="3lZH7k" value="derive_from_internal_value" />
     <ref role="M4eZT" to="tpck:fKAQMTB" resolve="boolean" />
     <node concept="M4N5e" id="1IQtzoy0Yuo" role="M5hS2">
       <property role="1uS6qv" value="true" />
@@ -266,8 +276,8 @@
       <property role="1uS6qo" value="kelvin" />
     </node>
     <node concept="M4N5e" id="2NjdNU1MINn" role="M5hS2">
-      <property role="1uS6qo" value="raw" />
-      <property role="1uS6qv" value="raw" />
+      <property role="1uS6qo" value="input" />
+      <property role="1uS6qv" value="input" />
     </node>
   </node>
   <node concept="1TIwiD" id="2NjdNU1MnH3">
@@ -275,6 +285,70 @@
     <property role="TrG5h" value="Action" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6W3af9HDeUA">
+    <property role="1pbfSe" value="592963688" />
+    <property role="TrG5h" value="ElseCondition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6W3af9HDeV2" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="elseTarget" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7r$TA1_e6OK" resolve="State" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6W3af9HEvuW">
+    <property role="1pbfSe" value="592633682" />
+    <property role="R5$K7" value="true" />
+    <property role="TrG5h" value="Condition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6W3af9HEzp1">
+    <property role="1pbfSe" value="592617677" />
+    <property role="TrG5h" value="BooleanCondition" />
+    <ref role="1TJDcQ" node="6W3af9HEvuW" resolve="Condition" />
+    <node concept="1TJgyi" id="6W3af9HEzpt" role="1TKVEl">
+      <property role="TrG5h" value="status" />
+      <ref role="AX2Wp" node="1IQtzoy0Yun" resolve="STATUS" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6W3af9HEzpv">
+    <property role="1pbfSe" value="592617647" />
+    <property role="TrG5h" value="ExpressionCondition" />
+    <ref role="1TJDcQ" node="6W3af9HEvuW" resolve="Condition" />
+    <node concept="1TJgyi" id="6W3af9HEzpV" role="1TKVEl">
+      <property role="TrG5h" value="comparator" />
+      <ref role="AX2Wp" node="6W3af9HEzpX" resolve="COMPARATOR" />
+    </node>
+    <node concept="1TJgyi" id="6W3af9HEzqG" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="6W3af9HEzpX">
+    <property role="TrG5h" value="COMPARATOR" />
+    <property role="3lZH7k" value="derive_from_presentation" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="6W3af9HEzpY" role="M5hS2">
+      <property role="1uS6qo" value="EQUAL" />
+      <property role="1uS6qv" value="==" />
+    </node>
+    <node concept="M4N5e" id="6W3af9HEzqq" role="M5hS2">
+      <property role="1uS6qv" value="&gt;" />
+      <property role="1uS6qo" value="GT" />
+    </node>
+    <node concept="M4N5e" id="6W3af9HEzqt" role="M5hS2">
+      <property role="1uS6qo" value="LT" />
+      <property role="1uS6qv" value="&lt;" />
+    </node>
+    <node concept="M4N5e" id="6W3af9HEzqx" role="M5hS2">
+      <property role="1uS6qo" value="GoET" />
+      <property role="1uS6qv" value="&gt;=" />
+    </node>
+    <node concept="M4N5e" id="6W3af9HEzqA" role="M5hS2">
+      <property role="1uS6qo" value="LoET" />
+      <property role="1uS6qv" value="&lt;=" />
+    </node>
   </node>
 </model>
 
