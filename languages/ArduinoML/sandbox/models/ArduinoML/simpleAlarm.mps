@@ -93,16 +93,16 @@
         <ref role="THp61" node="268oGR6aY3$" resolve="button" />
         <ref role="2CbBQ" node="268oGR6aVNi" resolve="idle" />
         <node concept="2EhUN" id="268oGR6bVj0" role="2EhWZ">
-          <property role="2EhUJ" value="true" />
+          <property role="2EhUJ" value="false" />
         </node>
       </node>
-      <node concept="2DWpk" id="268oGR6bVj3" role="3BDQSv">
+      <node concept="2DWpk" id="9o40xQIDSH" role="3BDQSv">
         <ref role="2DWoK" node="268oGR6aY3x" resolve="alarm" />
       </node>
     </node>
     <node concept="jO$A6" id="268oGR6aY3$" role="jO$Aa">
       <property role="TrG5h" value="button" />
-      <property role="jO$A3" value="8" />
+      <property role="jO$A3" value="10" />
     </node>
     <node concept="THujk" id="268oGR6aY3E" role="jO$Aa">
       <property role="TrG5h" value="buzzer" />
@@ -110,7 +110,7 @@
     </node>
     <node concept="THujk" id="268oGR6aY3M" role="jO$Aa">
       <property role="TrG5h" value="led" />
-      <property role="jO$A3" value="10" />
+      <property role="jO$A3" value="8" />
     </node>
   </node>
 </model>
