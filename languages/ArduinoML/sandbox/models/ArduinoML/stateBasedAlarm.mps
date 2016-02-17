@@ -25,7 +25,6 @@
       <concept id="8567225692854971696" name="ArduinoML.structure.State" flags="ng" index="jR8Hg">
         <child id="3229986099359742788" name="actions" index="2H6$LU" />
         <child id="3229986099359916108" name="transitions" index="2H7LtM" />
-        <child id="2416289836017061074" name="else" index="3BDQSv" />
       </concept>
       <concept id="4529363332655274602" name="ArduinoML.structure.Transition" flags="ng" index="FgPQu">
         <reference id="7999282384826765572" name="target" index="2CbBQ" />
@@ -33,6 +32,7 @@
       <concept id="1996913459656386421" name="ArduinoML.structure.ConditionalTransition" flags="ng" index="THp53">
         <reference id="1996913459656386487" name="sensor" index="THp61" />
         <child id="7999282384827201485" name="condition" index="2EhWZ" />
+        <child id="7133303001411429887" name="else" index="1gDr2Q" />
       </concept>
       <concept id="1996913459656364770" name="ArduinoML.structure.Actuator" flags="ng" index="THujk" />
       <concept id="2416289836016858977" name="ArduinoML.structure.ToggleActuator" flags="ng" index="3BCTmG">
@@ -51,9 +51,6 @@
     <ref role="jR9YG" node="268oGR6dDc_" resolve="idle" />
     <node concept="jR8Hg" id="268oGR6dDc_" role="jR9YD">
       <property role="TrG5h" value="idle" />
-      <node concept="2DWpk" id="268oGR6dDcU" role="3BDQSv">
-        <ref role="2DWoK" node="268oGR6dDc_" resolve="idle" />
-      </node>
       <node concept="3BCTmG" id="268oGR6dIAf" role="2H6$LU">
         <property role="3BCTmJ" value="false" />
         <ref role="3BCTmD" node="268oGR6dDcB" resolve="led" />
@@ -72,14 +69,14 @@
         <property role="3BCTmJ" value="true" />
         <ref role="3BCTmD" node="268oGR6dDcB" resolve="led" />
       </node>
-      <node concept="2DWpk" id="268oGR6dDdh" role="3BDQSv">
-        <ref role="2DWoK" node="268oGR6dDcW" resolve="led_on" />
-      </node>
       <node concept="THp53" id="268oGR6dDdB" role="2H7LtM">
         <ref role="THp61" node="268oGR6dDcP" resolve="button" />
         <ref role="2CbBQ" node="268oGR6dDc_" resolve="idle" />
         <node concept="2EhUN" id="268oGR6dDdF" role="2EhWZ">
           <property role="2EhUJ" value="true" />
+        </node>
+        <node concept="2DWpk" id="46BK05maqpe" role="1gDr2Q">
+          <ref role="2DWoK" node="268oGR6dDcW" resolve="led_on" />
         </node>
       </node>
     </node>

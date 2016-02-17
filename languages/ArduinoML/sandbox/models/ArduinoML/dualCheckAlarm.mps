@@ -25,7 +25,9 @@
       <concept id="8567225692854971696" name="ArduinoML.structure.State" flags="ng" index="jR8Hg">
         <child id="3229986099359742788" name="actions" index="2H6$LU" />
         <child id="3229986099359916108" name="transitions" index="2H7LtM" />
-        <child id="2416289836017061074" name="else" index="3BDQSv" />
+      </concept>
+      <concept id="892182961083762256" name="ArduinoML.structure.ReadValue" flags="ng" index="qr6RX">
+        <reference id="892182961083762257" name="sensor" index="qr6RW" />
       </concept>
       <concept id="4529363332655274602" name="ArduinoML.structure.Transition" flags="ng" index="FgPQu">
         <reference id="7999282384826765572" name="target" index="2CbBQ" />
@@ -33,6 +35,7 @@
       <concept id="1996913459656386421" name="ArduinoML.structure.ConditionalTransition" flags="ng" index="THp53">
         <reference id="1996913459656386487" name="sensor" index="THp61" />
         <child id="7999282384827201485" name="condition" index="2EhWZ" />
+        <child id="7133303001411429887" name="else" index="1gDr2Q" />
       </concept>
       <concept id="1996913459656364770" name="ArduinoML.structure.Actuator" flags="ng" index="THujk" />
       <concept id="2416289836016858977" name="ArduinoML.structure.ToggleActuator" flags="ng" index="3BCTmG">
@@ -55,9 +58,6 @@
         <property role="3BCTmJ" value="false" />
         <ref role="3BCTmD" node="268oGR6dzTE" resolve="buzzer" />
       </node>
-      <node concept="2DWpk" id="268oGR6dzTZ" role="3BDQSv">
-        <ref role="2DWoK" node="268oGR6dzTC" resolve="idle" />
-      </node>
       <node concept="THp53" id="268oGR6dzUw" role="2H7LtM">
         <ref role="THp61" node="268oGR6dzTK" resolve="button_one" />
         <ref role="2CbBQ" node="268oGR6dzU1" resolve="pushed_one" />
@@ -75,9 +75,6 @@
     </node>
     <node concept="jR8Hg" id="268oGR6dzU1" role="jR9YD">
       <property role="TrG5h" value="pushed_one" />
-      <node concept="2DWpk" id="268oGR6dzU8" role="3BDQSv">
-        <ref role="2DWoK" node="268oGR6dzU1" resolve="pushed_one" />
-      </node>
       <node concept="THp53" id="268oGR6dzUQ" role="2H7LtM">
         <ref role="THp61" node="268oGR6dzTK" resolve="button_one" />
         <ref role="2CbBQ" node="268oGR6dzTC" resolve="idle" />
@@ -91,13 +88,13 @@
         <node concept="2EhUN" id="268oGR6dzV9" role="2EhWZ">
           <property role="2EhUJ" value="true" />
         </node>
+        <node concept="2DWpk" id="46BK05maqoS" role="1gDr2Q">
+          <ref role="2DWoK" node="268oGR6dzU1" resolve="pushed_one" />
+        </node>
       </node>
     </node>
     <node concept="jR8Hg" id="268oGR6dzUa" role="jR9YD">
       <property role="TrG5h" value="pushed_two" />
-      <node concept="2DWpk" id="268oGR6dzUh" role="3BDQSv">
-        <ref role="2DWoK" node="268oGR6dzUa" resolve="pushed_two" />
-      </node>
       <node concept="THp53" id="268oGR6dzVc" role="2H7LtM">
         <ref role="THp61" node="268oGR6dzTK" resolve="button_one" />
         <ref role="2CbBQ" node="268oGR6dzUj" resolve="alarm" />
@@ -111,6 +108,9 @@
         <node concept="2EhUN" id="268oGR6dzVv" role="2EhWZ">
           <property role="2EhUJ" value="false" />
         </node>
+        <node concept="2DWpk" id="46BK05maqoW" role="1gDr2Q">
+          <ref role="2DWoK" node="268oGR6dzUa" resolve="pushed_two" />
+        </node>
       </node>
     </node>
     <node concept="jR8Hg" id="268oGR6dzUj" role="jR9YD">
@@ -118,9 +118,6 @@
       <node concept="3BCTmG" id="268oGR6dzUs" role="2H6$LU">
         <property role="3BCTmJ" value="true" />
         <ref role="3BCTmD" node="268oGR6dzTE" resolve="buzzer" />
-      </node>
-      <node concept="2DWpk" id="268oGR6dzUu" role="3BDQSv">
-        <ref role="2DWoK" node="268oGR6dzUj" resolve="alarm" />
       </node>
       <node concept="THp53" id="268oGR6dzVy" role="2H7LtM">
         <ref role="THp61" node="268oGR6dzTK" resolve="button_one" />
@@ -134,6 +131,22 @@
         <ref role="2CbBQ" node="268oGR6dzTC" resolve="idle" />
         <node concept="2EhUN" id="268oGR6dzVP" role="2EhWZ">
           <property role="2EhUJ" value="false" />
+        </node>
+        <node concept="2DWpk" id="46BK05maqoU" role="1gDr2Q">
+          <ref role="2DWoK" node="268oGR6dzUj" resolve="alarm" />
+        </node>
+      </node>
+    </node>
+    <node concept="jR8Hg" id="6bY_k$Mnevn" role="jR9YD">
+      <property role="TrG5h" value="helo" />
+      <node concept="qr6RX" id="6bY_k$MnevN" role="2H6$LU">
+        <ref role="qr6RW" node="268oGR6dzTK" resolve="button_one" />
+      </node>
+      <node concept="THp53" id="6bY_k$MnevP" role="2H7LtM">
+        <ref role="THp61" node="268oGR6dzTK" resolve="button_one" />
+        <ref role="2CbBQ" node="268oGR6dzUj" resolve="alarm" />
+        <node concept="2EhUN" id="6bY_k$MnevW" role="2EhWZ">
+          <property role="2EhUJ" value="true" />
         </node>
       </node>
     </node>

@@ -38,7 +38,6 @@
       <concept id="8567225692854971696" name="ArduinoML.structure.State" flags="ng" index="jR8Hg">
         <child id="3229986099359742788" name="actions" index="2H6$LU" />
         <child id="3229986099359916108" name="transitions" index="2H7LtM" />
-        <child id="2416289836017061074" name="else" index="3BDQSv" />
       </concept>
       <concept id="892182961083762256" name="ArduinoML.structure.ReadValue" flags="ng" index="qr6RX">
         <reference id="892182961083762257" name="sensor" index="qr6RW" />
@@ -59,6 +58,7 @@
       <concept id="1996913459656386421" name="ArduinoML.structure.ConditionalTransition" flags="ng" index="THp53">
         <reference id="1996913459656386487" name="sensor" index="THp61" />
         <child id="7999282384827201485" name="condition" index="2EhWZ" />
+        <child id="7133303001411429887" name="else" index="1gDr2Q" />
       </concept>
       <concept id="1996913459656386393" name="ArduinoML.structure.Goto" flags="ng" index="THp5J" />
       <concept id="1996913459656364770" name="ArduinoML.structure.Actuator" flags="ng" index="THujk" />
@@ -126,13 +126,8 @@
           <property role="2EhU9" value="&gt;" />
           <property role="2EhTu" value="25" />
         </node>
-      </node>
-      <node concept="THp53" id="9o40xQJGgJ" role="2H7LtM">
-        <ref role="THp61" node="7r$TA1_dU1F" resolve="temperature" />
-        <ref role="2CbBQ" node="9o40xQJGgW" resolve="reset_alarm" />
-        <node concept="2EhUH" id="9o40xQJGgT" role="2EhWZ">
-          <property role="2EhU9" value="&lt;" />
-          <property role="2EhTu" value="25" />
+        <node concept="2DWpk" id="46BK05marsz" role="1gDr2Q">
+          <ref role="2DWoK" node="9o40xQJGgW" resolve="reset_alarm" />
         </node>
       </node>
       <node concept="FjJzT" id="2NjdNU1Ny4K" role="2H6$LU">
@@ -141,9 +136,6 @@
       </node>
       <node concept="qr6RX" id="6W3af9HF9Ml" role="2H6$LU">
         <ref role="qr6RW" node="LxEUOm3Le_" resolve="button" />
-      </node>
-      <node concept="2DWpk" id="9o40xQIFv$" role="3BDQSv">
-        <ref role="2DWoK" node="2NjdNU1NuOx" resolve="read" />
       </node>
     </node>
     <node concept="jR8Hg" id="2NjdNU1Ny4M" role="jR9YD">
@@ -158,9 +150,9 @@
         <node concept="2EhUN" id="9o40xQJHim" role="2EhWZ">
           <property role="2EhUJ" value="true" />
         </node>
-      </node>
-      <node concept="2DWpk" id="9o40xQJHiv" role="3BDQSv">
-        <ref role="2DWoK" node="2NjdNU1NuOx" resolve="read" />
+        <node concept="2DWpk" id="6bY_k$Mnfw6" role="1gDr2Q">
+          <ref role="2DWoK" node="2NjdNU1NuOx" resolve="read" />
+        </node>
       </node>
     </node>
     <node concept="jR8Hg" id="9o40xQIFuh" role="jR9YD">
@@ -169,18 +161,12 @@
         <property role="3BCTmJ" value="true" />
         <ref role="3BCTmD" node="1IQtzoy0XGV" resolve="led" />
       </node>
-      <node concept="THp5J" id="9o40xQJvgs" role="2H7LtM">
-        <ref role="2CbBQ" node="2NjdNU1NuOx" resolve="read" />
-      </node>
     </node>
     <node concept="jR8Hg" id="9o40xQJGgW" role="jR9YD">
       <property role="TrG5h" value="reset_alarm" />
       <node concept="3BCTmG" id="9o40xQJGhi" role="2H6$LU">
         <property role="3BCTmJ" value="false" />
         <ref role="3BCTmD" node="1IQtzoy0XGV" resolve="led" />
-      </node>
-      <node concept="THp5J" id="9o40xQJGhk" role="2H7LtM">
-        <ref role="2CbBQ" node="2NjdNU1NuOx" resolve="read" />
       </node>
     </node>
   </node>

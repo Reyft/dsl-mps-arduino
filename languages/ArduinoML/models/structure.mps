@@ -127,11 +127,6 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3VrxZglAdDE" resolve="Transition" />
     </node>
-    <node concept="1TJgyj" id="268oGR6bKNi" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="else" />
-      <ref role="20lvS9" node="6W3af9HDeUA" resolve="ElseCondition" />
-    </node>
     <node concept="PrWs8" id="7r$TA1_e6PB" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -229,6 +224,11 @@
       <property role="20kJfa" value="condition" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="6W3af9HEvuW" resolve="Condition" />
+    </node>
+    <node concept="1TJgyj" id="6bY_k$MmMnZ" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="else" />
+      <ref role="20lvS9" node="6W3af9HDeUA" resolve="ElseCondition" />
     </node>
     <node concept="1TJgyj" id="1IQtzoy0YuR" role="1TKVEi">
       <property role="20lmBu" value="reference" />
